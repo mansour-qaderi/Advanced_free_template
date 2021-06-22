@@ -1,0 +1,33 @@
+.header{
+    height: 97vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primary-color-dark, 0.5),
+        rgba($primary-color-light, 0.7)),
+        url('../img/slide-2.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    &-logo{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+
+        .logo{
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+        }
+        
+    }
+
+    &-text{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        text-align: center;
+    }
+}

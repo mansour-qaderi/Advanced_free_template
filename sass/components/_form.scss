@@ -1,0 +1,98 @@
+.form{
+
+    &__group{
+
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__input{
+        border: none;
+        font-family: inherit;
+        font-size: 1.5rem;
+        color: inherit;
+        border-radius: 2px;
+        padding: 1.5rem 2rem;
+        background-color: rgba($color-white,.7);
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .3s;
+
+        &:focus{
+            outline: none;
+            border-bottom: 3px solid $color-primary;
+            box-shadow: 0 1.5rem 2rem rgba($color-black, .1);
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+
+        &::-webkit-input-placeholder{  //  رنگ placeholder که در input استفاده می شود
+            $color-gray-dark-2: #999;
+        }
+    }
+
+    &__label{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: black;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__radio-group{
+        width: 49%;
+        display: inline-block;   
+        
+    }
+
+    &__radio-input{
+        display: none;
+    }
+
+    &__radio-label{
+        font-size: $default-font-size;
+        cursor : pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__radio-botton{
+        width: 3rem;
+        height: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: -.4rem;
+        left: 0;
+
+        &::after{
+            content: '';
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            display: block;
+            background-color: $color-primary;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            opacity: 0;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-botton::after{  // به تمام برادر و یا خواهر radio-input این استایل رو بده
+        opacity: 1;
+    }
+}
