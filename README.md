@@ -2,7 +2,7 @@
 
 its very beautiful template that you can use your website.
 
-its have scss file that compiled in index.css
+its have scss file that compiled in css/style.css
 
 All things that you need INSTALL for this website:
 
