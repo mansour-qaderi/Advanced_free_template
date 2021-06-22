@@ -10,7 +10,7 @@ All things that you need INSTALL for this website:
 
 2: npm install node-sass --save-dev
 
-3: npm install live-server
+3: npm install live-server --save
 
 4: in package.json you should write in "scripts" like:
 
